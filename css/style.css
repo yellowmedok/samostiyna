@@ -1,0 +1,237 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.sidebar {
+    position: fixed; /* Фіксоване положення бокової панелі */
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh; /* Висота на всю висоту вікна */
+    background-color: #ffffff;
+    padding: 40px;
+    box-sizing: border-box; /* Врахування padding у ширині */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Розподіляє контент рівномірно */
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none; /* Видалення підкреслення */
+    margin-bottom: 20px;
+    color: #000; /* Зробити чорним за замовчуванням */
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Підкреслення лише при наведенні */
+    font-size: 1.2em; /* Збільшення шрифта */
+    color: #0073e6; /* Синій колір при наведенні */
+}
+
+.nav-header {
+    display: flex; /* Вирівнюємо елементи у рядок */
+    justify-content: space-between; /* Розподіляємо заголовок і логотип */
+    align-items: center; /* Вирівнюємо вертикально */
+    margin-bottom: 20px; /* Відступ між заголовком і наступним контентом */
+}
+
+.logo-link {
+    display: inline-block; /* Робимо логотип клікабельним */
+}
+
+.logo {
+    height: 40px; /* Висота логотипа */
+    width: auto; /* Пропорційна ширина */
+    cursor: pointer; /* Курсор у вигляді руки */
+    transition: transform 0.2s ease; /* Додаємо ефект при наведенні */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Збільшуємо логотип при наведенні */
+}
+
+.instagram-link {
+    display: flex; /* Flex для вирівнювання іконки та тексту */
+    align-items: center;
+    margin-top: auto; /* Переміщає Instagram-посилання в кінець */
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.instagram-link img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.instagram-link span {
+    font-size: 16px;
+}
+
+/* Основний контент */
+header, main, footer {
+    margin-left: 400px;
+    padding: 40px;
+    width: calc(100% - 400px); /* Враховуємо Sidebar */
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    margin-left: 400px; /* Враховуємо ширину сайдбара */
+    width: calc(100% - 400px); /* Враховуємо ширину сайдбара */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Кнопка "Повернутися до початку" */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    display: none;
+}
+
+/* Адаптивні стилі */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative; /* Переміщаємо Sidebar */
+        width: 100%;
+        height: auto; /* Автоматична висота */
+        padding: 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px; /* Додаємо відступ від галереї */
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    header, main, footer {
+        margin-left: 0;
+        width: 100%; /* Контент займає всю ширину */
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Одноколонкова структура */
+        grid-gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%; /* Фото займають всю ширину */
+        height: auto;
+    }
+
+    .instagram-link {
+        margin-top: 20px; /* Відступ для акуратності */
+        text-align: center; /* Центрування тексту */
+        justify-content: center; /* Вирівнювання посилання */
+    }
+
+    .logo {
+        height: 30px; /* Зменшуємо логотип для мобільних */
+    }
+}
+
+.animation{
+    padding-top: 40px;
+}
+
+.container {
+    max-width: 1500px;
+    padding: 20px;
+    background-color: #000;
+}
+
+.inner-div {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+}
+
+.container:hover .inner-div {
+    /* specifies the animation name */
+    animation-name: move-to-right;
+
+    /* specifies the animation duration */
+    animation-duration: 3s;
+
+    /* repeats the animation 2 times */
+    animation-iteration-count: 2;
+}
+
+@keyframes move-to-right {
+    0% {
+        top: 0%;
+        left: 0%;
+    }
+
+    100% {
+        top: 0%;
+        left: 85%;
+    }
+}
+
+.map{
+    padding-top: 40px;
+}
+
+.video{
+    padding-top: 40px;
+}
+.widget{
+    padding-top: 40px;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    display: none; /* За замовчуванням приховано */
+}
+  
+
+
+
+
+

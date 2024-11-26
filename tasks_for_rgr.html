@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>завдання для ргр</title>
+    <link rel="icon" type="image/png" href="images/camera.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tiny5&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--for button-->
+    <a href="#top" id="scrollToTop" title="Наверх">⬆</a>
+    <div id="top"></div>
+
+    <!--header-->
+    <header>
+        <h1>yeeell0w - фотографія</h1>
+    </header>
+
+    <!-- sidebar navigation -->
+
+    <nav class="sidebar">
+        <div class="nav-header">
+            <h1>навіґація</h1>
+            <a href="index.html" class="logo-link">
+                <img src="images/camera.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <a href="index.html">світлини</a>
+        <a href="equipment.html">техніка</a>
+        <a href="about.html">про себе</a>
+        <a href="tasks_for_rgr.html">завдання для ргр</a>
+        <div class="instagram-link">
+            <a href="https://www.instagram.com/yeeell0w" target="_blank">
+                <img src="images/instagram_logo.svg" alt="instagram icon" class="instagram_icon">
+                <span>yeeell0w</span>
+            </a>
+        </div>
+    </nav>
+        
+    <!-- main content -->
+
+    <main>
+
+        <!-- about section -->
+        <section id="about">
+            <section id="for_rgr" class="py-5">
+                <h1>завдання для ргр</h1>
+                <p>іконкові шрифти: </p>
+                <i class="fas fa-poo"></i>
+    
+                <div class="animation">
+                    <p>css-анімація (наведіть мишку):</p>
+                    <div class="container">
+                        <div class="inner-div"></div>
+                    </div>
+                </div>
+        
+                <div class="map">
+                    <p>карта політехніки:</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d779.0682003397238!2d24.01206889771066!3d49.83660596325601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1suk!2sua!4v1732558820674!5m2!1suk!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+    
+                <div class="video">
+                    <p>відео з youtube:</p>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/2zQ4qQ6xgm0?si=twewuZLjJ3vf3rX9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <div class="widget">
+                    <p>віджет spotify:</p>
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2Nzk0jl0hvVR1LochxlVwi?utm_source=generator&theme=0" width="100%" height="300" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+    
+                <div class="informer">
+                    <p>інформер:</p>
+                    <div id="ww_571b167a4d4b2" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl2988"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#000000","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_whr":3}'><a href="https://weatherwidget.org/" id="ww_571b167a4d4b2_u" target="_blank">Free weather widget for website</a></div><script async src="https://app3.weatherwidget.org/js/?id=ww_571b167a4d4b2"></script>
+                </div>   
+            </section>
+        </section>
+    </main>
+
+    <!--footer-->
+    <footer>
+        <p>&copy; 2024 yeeell0w | web design</p>
+    </footer>
+
+    <button id="scrollToTop"></button>
+
+    <a href="#top" id="scrollToTop" class="scroll-to-top"></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+<script>
+    window.onscroll = function() {
+      const scrollToTopButton = document.getElementById("scrollToTop");
+      if (document.documentElement.scrollTop > 10) {
+        scrollToTopButton.style.display = "block";
+      } else {
+        scrollToTopButton.style.display = "none";
+      }
+    };
+  
+    // Smooth Scroll ініціалізація
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 700,
+      speedAsDuration: true,
+    });
+</script>
+  
+</html>
